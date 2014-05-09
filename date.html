@@ -9,8 +9,7 @@
 </head>
 <body>
   <script type="text/javascript">
-    var now = new Date();
-    //console.log(now.toString());
+
     function isBigYear(year) {
       if(year%400==0||(year%4==0&&year%100!=0)) {
         return true;
@@ -18,15 +17,10 @@
         return false;
       }
     }
-    //console.log(isBigYear(2008));
+    console.log(isBigYear(2008));
+    
     var totalDays = [0,31,28,31,30,31,30,31,31,30,31,30,30];
-    //var nowYear = now.getFullYear();
-    //var nowMonth = now.getMonth()+1;
-    //var nowDay = now.getDate();
-    var nowDate = [now.getFullYear(),now.getMonth()+1,now.getDate()];
-    var nowTime = now.getTime();
-    //console.log(nowTime);
-    //console.log([nowYear,nowMonth,nowDay]);
+
     function getTargetDate(n) {
       var target = new Date();
       target.setTime(target.getTime()-24*3600*1000*n);
@@ -34,12 +28,6 @@
       return targetDate;
     }
     console.log(getTargetDate(30));
-    function getTargetDate2(nowDate,n) {
-      var targetDate;
-      // if(nowDate[2]>n) {
-      //     targetDate = [nowDate[0],nowDate[1],nowDate[2]-n];
-      // } else if() {}
-    }
   </script>
 </body>
 </html>
