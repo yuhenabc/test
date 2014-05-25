@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="GB2312" />
+	<title>学习</title>
+</head>
+<body>
+<style>
+.redlink {color:red; text-decoration: none;}
+.redlink:hover {color:black;}
+</style>
+<script type="text/javascript">
+function changeClass() {
+	var lianjie = document.getElementById('lianjie');
+	lianjie.className='redlink';
+}
+</script>
+<a id="lianjie" href="">链接地址</a>
+<br/>
+<input type="button" value="点我" onclick="changeClass()"/>
+</body>
+<html>

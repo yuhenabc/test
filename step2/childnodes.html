@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>DOM</title>
+<style>
+
+</style>
+<script type="text/javascript">
+window.onload = function() {
+	var list = document.getElementById('list');
+	for(i=0;i<list.childNodes.length;i++) {
+		//alert(list.childNodes[i].nodeType);
+		// nodeType==1 元素（标签）节点
+		// nodeType==3 文本（非标签）节点
+		if(list.childNodes[i].nodeType==1) {
+			list.childNodes[i].style.background = 'red';
+		}
+	}
+}
+</script>
+</head>
+<body>
+	<ul id="list">
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

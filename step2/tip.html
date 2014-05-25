@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>提示框</title>
+<style>
+#div1 {width:50px; height:50px; background-color: red; margin: 10px; float: left;}
+#div2 {width:200px; height:120px; background-color: #9EE; margin: 10px; float: left; display:none;}
+</style>
+<script type="text/javascript">
+window.onload = function() {
+	var tx = document.getElementById('div1');
+	var tip = document.getElementById('div2');
+	var timer = null;
+	tx.onmouseover=tip.onmouseover = function() {
+		tip.style.display = 'block';
+		clearTimeout(timer);
+	}
+	tx.onmouseout=tip.onmouseout = function() {
+		timer = setInterval(function(){
+				tip.style.display = 'none';
+			}, 500);
+	}
+}
+</script>
+</head>
+<body>
+<div id="div1">图片</div>
+<div id="div2">一些信息</div>
+</body>
+</html>
