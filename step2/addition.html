@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="GB2312" />
+	<title>求和</title>
+<script>
+window.onload = function() {
+	var text1 = document.getElementById("text1");
+	var text2 = document.getElementById("text2");
+	var btn1 = document.getElementById("btn1");
+	var btn2 = document.getElementById("btn2");
+
+	btn1.onclick = function() {
+		btn2.value = parseFloat(text1.value) + parseFloat(text2.value);
+	};
+
+}
+</script>
+</head>
+<body>
+<input type="text" id="text1"/>
+<input type="text" id="text2"/>
+<input type="button" value="求和" id="btn1"/>
+<input type="button" value="?" id="btn2"/>
+</body>
+</html>

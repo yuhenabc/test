@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>浏览器</title>
+<script type="text/javascript">
+function reportBrowser()
+{
+    var name=navigator.appName;
+    var version=navigator.appVersion;
+    alert("您的浏览器类型：\n"+name+"\n您的浏览器版本：\n"+version);
+}
+function isOnline() {
+	if(navigator.onLine)
+	{
+		alert("系统已经连接上网络！");
+	}
+	else
+	{
+		alert("系统处于脱机状态！");
+	}
+}
+</script>
+</head>
+<body>
+<p onClick="reportBrowser()">检测浏览器类型？</p>
+<p onClick="isOnline()">点击测试是否连接上网？</p>
+</body>
+</html>

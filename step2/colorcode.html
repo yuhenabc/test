@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="GB2312"/>
+<title>代码展示</title>
+<style>
+body{padding-bottom: 0;background-color: #EB3B0F;}
+#main a{color:#A33;}
+#main a:hover{color:black;}
+#Header1_HeaderTitle{font-size:16px; font-family:"新宋体",sans-serif; font-weight:bold;}
+#sideBar{background-color: bisque;}
+#yuhenabc_avatar a{display: block; border: 2px solid #FCC;width:140px; height:140px;}
+#yuhenabc_avatar a:hover{border: 2px solid #FEE;}
+#yuhenabc_avatar img{width:100%;}
+#blog-comments-placeholder{clear:both;background-color: bisque;border-radius: 6px;border: 1px solid #FCC;padding: 20px;margin-bottom: 20px;}
+#comment_form{clear:both;background-color: bisque;border-radius: 6px;border: 1px solid #FCC;padding: 20px;margin-bottom: 20px;}
+#tbCommentBody{width:100%; height:100px;}
+#footer{margin-bottom: 0; background-color: black; color: #DDD; padding-bottom: 10px;}
+#site_nav_under,#blog_news_kb,#comment_nav{display: none;}
+#blog-calendar{background-color: white;border: 1px solid #FCC;}
+.blogStats{color: #E00A0A;}
+.feedbackCon {background: url("http://images.cnitblog.com/blog/343602/201310/28161711-192e21870ffc4a3585131a257617de69.png") top left no-repeat;}
+.btn_my_zzk{width:70px;}
+.commentbox_title{width:100%;}
+.postDesc{padding: 30px 0px;color: #DAA !important;}
+.postDesc a,.postDesc a:hover,.postDesc a:link{background-color: white !important; font-size:12px;}
+.PostList a{color:black !important;}
+.PostList a:hover{color:white !important;}
+.PostList{border-bottom: 1px solid black;}
+.entrylistPosttitle a{color:black !important;}
+.entrylistPosttitle a:hover{color:white !important;}
+.entrylistItemPostDesc a{background-color:#EEE !important;}
+.entrylistItemPostDesc a:link{background-color:#EEE !important;}
+.entrylistItemPostDesc a:hover{background-color:white !important;}
+.day{margin-bottom: 30px;padding: 10px;background-color: bisque;border-radius: 6px;border: 1px solid #FCC;}
+.post{background-color: bisque;border: 1px solid #FCC;}
+.postTitle{width: 98%;border: 1px solid #FCC;background-color: white;border-radius: 4px;padding: 5px;}
+.syntaxhighlighter a,.syntaxhighlighter div,.syntaxhighlighter code,.syntaxhighlighter table,.syntaxhighlighter table td,.syntaxhighlighter table tr,.syntaxhighlighter table tbody,.syntaxhighlighter table thead,.syntaxhighlighter table caption,.syntaxhighlighter textarea{-moz-border-radius: 0 0 0 0;-webkit-border-radius: 0 0 0 0;background: none;border: 0;float: none;height: auto;left: auto;line-height: 1.1em;margin: 0;outline: 0;overflow: visible;padding: 0;position: static;right: auto;text-align: left;top: auto;bottom:auto;vertical-align: baseline;width: auto;box-sizing: content-box;font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;font-weight: normal;font-style: normal;font-size: 1em;min-height: inherit;}
+.syntaxhighlighter{width: 100%;margin: 1em 0 1em 0;position: relative;overflow: auto;font-size: 1em;}
+.syntaxhighlighter.source{overflow: hidden;}
+.syntaxhighlighter .bold{font-weight: bold;}
+.syntaxhighlighter .italic{font-style: italic;}
+.syntaxhighlighter .line{white-space: pre;}
+.syntaxhighlighter table{width: 100%;}
+.syntaxhighlighter table caption{text-align: left;padding: .5em 0 0.5em 1em;}
+.syntaxhighlighter table td.code{width: 100%;}
+.syntaxhighlighter table td.code .container{position: relative;}
+.syntaxhighlighter table td.code .container textarea{box-sizing: border-box;position: absolute;left: 0;top: 0;width: 100%;height: 100%;border: none;background: white;padding-left: 1em;overflow: hidden;white-space: pre;}
+.syntaxhighlighter table td.gutter .line{text-align: right;padding: 0 0.5em 0 1em;}
+.syntaxhighlighter table td.code .line{padding: 0 1em;}
+.syntaxhighlighter.nogutter td.code .container textarea, .syntaxhighlighter.nogutter td.code .line{padding-left: 0em;}
+.syntaxhighlighter.show{display: block;}
+.syntaxhighlighter.collapsed table{display: none;}
+.syntaxhighlighter.collapsed .toolbar{padding: 0.1em 0.8em 0em 0.8em;font-size: 1em;position: static;width: auto;height: auto;}
+.syntaxhighlighter.collapsed .toolbar span{display: inline;margin-right: 1em;}
+.syntaxhighlighter.collapsed .toolbar span a{padding: 0;display: none;}
+.syntaxhighlighter.collapsed .toolbar span a.expandSource{display: inline;}
+.syntaxhighlighter .toolbar{position: absolute;right: 1px;top: 1px;width: 11px;height: 11px;font-size: 10px;z-index: 10;}
+.syntaxhighlighter .toolbar span.title{display: inline;}
+.syntaxhighlighter .toolbar a{display: block;text-align: center;text-decoration: none;padding-top: 1px;}
+.syntaxhighlighter .toolbar a.expandSource{display: none;}
+.syntaxhighlighter.ie{font-size: .9em;padding: 1px 0 1px 0;}
+.syntaxhighlighter.ie .toolbar{line-height: 8px;}
+.syntaxhighlighter.ie .toolbar a{padding-top: 0px;}
+.syntaxhighlighter.printing .line.alt1 .content,
+.syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number,
+.syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content{background: none;}
+.syntaxhighlighter.printing .line .number{color: #bbbbbb;}
+.syntaxhighlighter.printing .line .content{color: black;}
+.syntaxhighlighter.printing .toolbar{display: none;}
+.syntaxhighlighter.printing a{text-decoration: none;}
+.syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a{color: black;}
+.syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a{color: #008200;}
+.syntaxhighlighter.printing .string, .syntaxhighlighter.printing .string a{color: blue;}
+.syntaxhighlighter.printing .keyword{color: #006699;font-weight: bold;}
+.syntaxhighlighter.printing .preprocessor{color: gray;}
+.syntaxhighlighter.printing .variable{color: #aa7700;}
+.syntaxhighlighter.printing .value{color: #009900;}
+.syntaxhighlighter.printing .functions{color: #ff1493;}
+.syntaxhighlighter.printing .constants{color: #0066cc;}
+.syntaxhighlighter.printing .script{font-weight: bold;}
+.syntaxhighlighter.printing .color1, .syntaxhighlighter.printing .color1 a{color: gray;}
+.syntaxhighlighter.printing .color2, .syntaxhighlighter.printing .color2 a{color: #ff1493;}
+.syntaxhighlighter.printing .color3, .syntaxhighlighter.printing .color3 a{color: red;}
+.syntaxhighlighter.printing .break, .syntaxhighlighter.printing .break a{color: black;}
+.syntaxhighlighter{background-color: white;}
+.syntaxhighlighter .line.alt1{background-color: white;}
+.syntaxhighlighter .line.alt2{background-color: white;}
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2{background-color: #e0e0e0;}
+.syntaxhighlighter .line.highlighted.number{color: black;}
+.syntaxhighlighter table caption{color: black;}
+.syntaxhighlighter .gutter{color: #afafaf;}
+.syntaxhighlighter .gutter .line{border-right: 3px solid #6ce26c;}
+.syntaxhighlighter .gutter .line.highlighted{background-color: #6ce26c;color: white;}
+.syntaxhighlighter.printing .line .content{border: none;}
+.syntaxhighlighter.collapsed{overflow: visible;}
+.syntaxhighlighter.collapsed .toolbar{color: blue;background: white;border: 1px solid #6ce26c;}
+.syntaxhighlighter.collapsed .toolbar a{color: blue;}
+.syntaxhighlighter.collapsed .toolbar a:hover{color: red;}
+.syntaxhighlighter .toolbar{color: white;background: #6ce26c;border: none;}
+.syntaxhighlighter .toolbar a{color: white;}
+.syntaxhighlighter .toolbar a:hover{color: black;}
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a{color: black;}
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a{color: #008200;}
+.syntaxhighlighter .string, .syntaxhighlighter .string a{color: blue;}
+.syntaxhighlighter .keyword{color: #006699;}
+.syntaxhighlighter .preprocessor{color: gray;}
+.syntaxhighlighter .variable{color: #aa7700;}
+.syntaxhighlighter .value{color: #009900;}
+.syntaxhighlighter .functions{color: #ff1493;}
+.syntaxhighlighter .constants{color: #0066cc;}
+.syntaxhighlighter .script{font-weight: bold;color: #006699;}
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a{color: gray;}
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a{color: #ff1493;}
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a{color: red;}
+.syntaxhighlighter .keyword{font-weight: bold;}
+.syntaxhighlighter table{margin: 1px 0;}
+</style>
+</head>
+<body>
+	<div id="highlighter_62983" class="syntaxhighlighter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;!doctype&nbsp;html&gt;</code></div><div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;首页&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">charset</code><code class="xml plain">=</code><code class="xml string">"utf-8"</code><code class="xml plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">http-equiv</code><code class="xml plain">=</code><code class="xml string">"X-UA-Compatible"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"IE=edge,chrome=1"</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"description"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"this&nbsp;is&nbsp;a&nbsp;html5&nbsp;webpage!"</code><code class="xml plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"author"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"feng"</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"viewport"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"width=device-width,initial-scale=1"</code><code class="xml plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">link</code>&nbsp;<code class="xml color1">rel</code><code class="xml plain">=</code><code class="xml string">"stylesheet"</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"css/style.css"</code><code class="xml plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">link</code>&nbsp;<code class="xml color1">rel</code><code class="xml plain">=</code><code class="xml string">"icon"</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"favicon.ico"</code>&nbsp;<code class="xml color1">type</code><code class="xml plain">=</code><code class="xml string">"image/x-icon"</code><code class="xml plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">style</code>&nbsp;<code class="xml color1">type</code><code class="xml plain">=</code><code class="xml string">"text/css"</code><code class="xml plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">#main&nbsp;{</code></div><div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">margin:100px&nbsp;auto;</code></div><div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">width:90%;</code></div><div class="line number16 index15 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">text-align:center;</code></div><div class="line number17 index16 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">font-size:60px;</code></div><div class="line number18 index17 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">font-family:"楷体",&nbsp;Arial,&nbsp;sans-serif;</code></div><div class="line number19 index18 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">text-shadow:2px&nbsp;2px&nbsp;2px&nbsp;rgba(200,&nbsp;200,&nbsp;200,&nbsp;0.5);</code></div><div class="line number20 index19 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div><div class="line number21 index20 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">body&nbsp;{</code></div><div class="line number22 index21 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">background-color:#2B81AF;</code></div><div class="line number23 index22 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div><div class="line number24 index23 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div><div class="line number25 index24 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">script</code>&nbsp;<code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"js/libs/modernizr-2.0.6.min.js"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">script</code><code class="xml plain">&gt;</code></div><div class="line number26 index25 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">script</code>&nbsp;<code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"js/libs/jquery-1.6.2.min.js"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">script</code><code class="xml plain">&gt;</code></div><div class="line number27 index26 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">script</code>&nbsp;<code class="xml plain">defer&nbsp;</code><code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"js/plugins.js"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">script</code><code class="xml plain">&gt;&nbsp;</code></div><div class="line number28 index27 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">script</code>&nbsp;<code class="xml plain">defer&nbsp;</code><code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"js/script.js"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">script</code><code class="xml plain">&gt;&nbsp;</code></div><div class="line number29 index28 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number30 index29 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div><div class="line number31 index30 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"container"</code><code class="xml plain">&gt;</code></div><div class="line number32 index31 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">header</code><code class="xml plain">&gt;&amp;nbsp;&lt;/</code><code class="xml keyword">header</code><code class="xml plain">&gt;</code></div><div class="line number33 index32 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"main"</code><code class="xml plain">&gt;</code></div><div class="line number34 index33 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">您看到的是一个HTNL5网页！</code></div><div class="line number35 index34 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number36 index35 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">footer</code><code class="xml plain">&gt;&amp;nbsp;&lt;/</code><code class="xml keyword">footer</code><code class="xml plain">&gt;</code></div><div class="line number37 index36 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div><div class="line number38 index37 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div><div class="line number39 index38 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div>
+</body>
+</html>

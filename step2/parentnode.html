@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>DOM</title>
+<style>
+
+</style>
+<script type="text/javascript">
+window.onload = function() {
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		as[i].onclick = function() {
+			this.parentNode.style.display = 'none';
+		}
+	}
+	
+}
+</script>
+</head>
+<body>
+	<ul>
+		<li>1111111111111<a href="javascript:;">隐藏<a></li>
+		<li>2222222222222<a href="javascript:;">隐藏<a></li>
+		<li>3333333333333<a href="javascript:;">隐藏<a></li>
+		<li>4444444444444<a href="javascript:;">隐藏<a></li>
+		<li>5555555555555<a href="javascript:;">隐藏<a></li>
+	</ul>
+</body>
+</html>

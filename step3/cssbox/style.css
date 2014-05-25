@@ -1,0 +1,5 @@
+﻿body {margin: 0; padding: 0;}
+#div1 {width:200px; height:100px; margin: 100px auto 0; background-color: #DDD;}
+#div2 {width:70px; height:70px; margin: 10px; float: left; background-color: red; border: 5px solid #000;}
+#div3 {width:80px; height:80px; padding: 5px; float: right; background-color: green; border: 5px solid #000;}
+#info {width:400px; margin: 0 auto; padding: 20px; font-size: 14px; line-height:20px;}

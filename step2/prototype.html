@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="GB2312" />
+	<title>继承</title>
+<script>
+
+function Animal(name){
+	this.name = name;
+	this.showName = function(){
+		alert(this.name);
+	}
+};
+
+var animal = new Animal("small_animal");
+animal.showName();
+
+function Cat(name){
+	this.name = name;
+};
+
+Cat.prototype = new Animal("unknow_animal");
+
+var cat = new Cat("black_cat");
+cat.showName();
+
+document.write("cat是不是Animal的实例？"+(cat instanceof Animal));
+
+</script>
+</head>
+<body>
+
+</body>
+</html> 
