@@ -1,41 +1,32 @@
 <html>
 <head>
-<title>全国省市县无刷新多级关联菜单</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style>
-body,select
-{
- font-size:9pt;
- font-family:Verdana;
-}
-a
-{
- color:red;
- text-decoration:none;
-}
-a:hover{
- text-decoration:underline;
-}
-</style>
-<script type="text/javascript" src="js/dsychange.js"></script>
-<SCRIPT LANGUAGE = JavaScript>
-
-var s=["s1","s2"];
-var opt0 = ["省份","地级市"];
-function setup()
-{
- for(i=0;i<s.length-1;i++)
-  document.getElementById(s[i]).onchange=new Function("dsyChange("+(i+1)+")");
-  dsyChange(0);
-}
-
-</SCRIPT>
+    <title>全国省市县无刷新多级关联菜单</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body,select {font-size:9pt; font-family:Verdana;}
+        a {color:red; text-decoration:none;}
+        a:hover {text-decoration:underline;}
+    </style>
+    <script type="text/javascript" src="js/dsychange.js"></script>
 </head>
 <body bgcolor="#E0E0E0" onload="setup()">
-多级关联菜单：
-<form name="frm">
-<select id="s1"><option>省份</option></select>
-<select id="s2"><option>地级市</option></select>
-</form>
+    多级关联菜单：
+    <form name="frm">
+        <select id="s1">
+            <option>省份</option>
+        </select>
+        <select id="s2">
+            <option>地级市</option>
+        </select>
+    </form>
+    <script type="text/javascript">
+    var s=["s1","s2"];
+    var opt0 = ["省份","地级市"];
+    function setup() {
+        for(i=0;i<s.length-1;i++)
+        document.getElementById(s[i]).onchange=new Function("dsyChange("+(i+1)+")");
+        dsyChange(0);
+    }
+    </script>
 </body>
 </html>

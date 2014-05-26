@@ -9,20 +9,16 @@
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <style type="text/css">
         body,p,h4,h5,ul,li {margin: 0; padding: 0}
-        body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: #EEE; padding-bottom: 30px;}
-        .container {padding: 0 10px; width: 360px; margin: 30px auto 0;}
-        .box {padding: 8px 5px; background-color: white; border:1px solid #DDD; border-radius: 6px; color: #333;}
-        .preview {width:340px; height: 600px; border: 0; border: 10px solid #DDD; border-radius: 5px;}
+        body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: #EEE;}
+        .container {width: 394px; height: 786px; margin: 0 auto 0; position: relative; background: url('img/android-phone.png') no-repeat;}
+        iframe.preview {position: absolute; bottom: 128px; left: 36px; width:320px; height: 567px; border: 0;}
+        .cover {position: absolute; bottom: 128px; left: 55px; width: 100px; height: 53px; z-index: 99;}
     </style>
 </head>
 <body>
 <div class="container">
-    <iframe name="preview" id="preview" class="preview" src="http://www.100wifi.com/hotspots/5/detail"></iframe>
-<div>
-<script type="text/javascript">
-    $(function() {
-        console.log($(window.frames["preview"].document));
-    });
-</script>
+    <iframe name="preview" id="preview" class="preview" src="http://m.100wifi.cn/hotspots/5/detail"></iframe>
+    <div class="cover"></div>
+</div>
 </body>
 </html>
