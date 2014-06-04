@@ -1,0 +1,7 @@
+.photo {opacity: 0.5; border-radius: 4px; width: 200px;}
+.go {width: 200px; min-height: 100px; margin: 40px auto;
+    background-image: linear-gradient(to bottom, #E75733, #FFAC38);
+    background-image: -moz-linear-gradient(top, #E75733, #F1AB35);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E75733), to(#F1AB35));
+    background-image: -webkit-linear-gradient(top, #E75733, #F1AB35);
+    background-image: -o-linear-gradient(top, #E75733, #F1AB35);}
