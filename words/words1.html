@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="站长,网页特效,js特效,js脚本,脚本,广告代码,zzjs,zzjs.net,sky,www.zzjs.net,站长特效 网" />
+<meta name="description" content="www.zzjs.net,站长特效网，站长必备js特效及广告代码。全力打造一流网页特效站！" />
+<title>文字从左侧弹出特效</title>
+<style type="text/css">
+.wwwzzjsnet{
+position: relative;
+left: -500px;
+}
+</style>
+<script type="text/javascript">
+var pausebetweenmsg=10
+var glidespeed=50
+var curobjindex=0
+function actualstyle(el, cssproperty){
+if (el.currentStyle)
+return el.currentStyle[cssproperty]
+else if (window.getComputedStyle){
+var elstyle=window.getComputedStyle(el, "")
+return elstyle.getPropertyValue(cssproperty)
+}
+}//欢迎来到站长特z效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+function collectElementbyClass(){
+var classname="wwwzzjsnet"
+glidearray=new Array()
+var inc=0
+var alltags=document.all? document.all : document.getElementsByTagName("*")
+for (i=0; i<alltags.length; i++){
+if (alltags[i].className==classname)
+glidearray[inc++]=alltags[i]
+}//欢迎来到站长z特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+if (glidearray.length>0)
+onebyoneglide()
+}
+function onebyoneglide(){
+if (curobjindex<glidearray.length)
+glidetimer=setInterval("glideroutine()",50)
+}//欢迎来到站z长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+function glideroutine(){
+if (parseInt(actualstyle(glidearray[curobjindex], "left"))<0)
+glidearray[curobjindex].style.left=parseInt(actualstyle(glidearray[curobjindex], "left"))+50
+else{
+glidearray[curobjindex].style.left=0
+curobjindex++
+clearInterval(glidetimer)
+setTimeout("onebyoneglide()", pausebetweenmsg)
+}
+}//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+if (window.addEventListener)
+window.addEventListener("load", collectElementbyClass, false)
+else if (window.attachEvent)
+window.attachEvent("onload", collectElementbyClass)
+else if (document.getElementById)
+window.onload=collectElementbyClass
+</script>
+</head>
+<body>
+<div class="wwwzzjsnet">倒数第7秒</div>
+<div class="wwwzzjsnet">倒数第6秒</div>
+<div class="wwwzzjsnet">倒数第5秒</div>
+<div class="wwwzzjsnet">倒数第4秒</div>
+<div class="wwwzzjsnet">倒数第3秒</div>
+<div class="wwwzzjsnet">倒数第2秒</div>
+<div class="wwwzzjsnet">倒数第1秒</div>
+<p class="wwwzzjsnet">欢迎来到快连北京！</p>
+</body>
+</html>
