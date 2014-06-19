@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>bootbox</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootbox.js"></script>
+    <style type="text/css">
+        body {margin:0; padding: 0}
+        .container {margin-top: 100px; text-align: center;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <button class="btn btn-default" id="btn1">alert</button>
+    <button class="btn btn-default" id="btn2">confirm</button>
+    <button class="btn btn-default" id="btn3">prompt</button>
+</div>
+<script>
+$(document).ready(function() {
+    $('#btn1').click(function() {
+        bootbox.alert("Hello world!", function(result) {
+            console.log('done');
+        });
+    });
+    $('#btn2').click(function() {
+        bootbox.confirm("Hello world!", function(result) {
+            console.log(result);
+        });
+    });
+    $('#btn3').click(function() {
+        bootbox.prompt("Hello world!", function(result) {
+            console.log(result);
+        });
+    });
+});
+</script>
+</body>
+</html>
