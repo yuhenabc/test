@@ -23,7 +23,7 @@
     var s=["s1","s2"];
     var opt0 = ["省份","地级市"];
     function setup() {
-        for(i=0;i<s.length-1;i++)
+        for(var i=0;i<s.length-1;i++)
         document.getElementById(s[i]).onchange=new Function("dsyChange("+(i+1)+")");
         dsyChange(0);
     }
