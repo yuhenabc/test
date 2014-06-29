@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        html播放音乐测试
+    </title>
+    <script id="jquery_183" type="text/javascript" class="library" src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+<style type="text/css" rel="stylesheet" scoped="scoped">
+    button{
+        border:1px solid #ccc;
+        cursor:pointer;
+        display:block;
+        margin:auto;
+        position:relative;
+        top:100px;
+    }
+</style>
+
+
+
+<audio  preload="auto" controls="controls" id="player1" >
+    <source src="/music.mp3" type="audio/mpeg" />
+
+    您的浏览器不支持 audio 标签。
+</audio>
+
+<script type="text/javascript">
+    //音频播放过程
+    $(document).ready(function(){
+
+        var player = $("#player1")[0];
+
+        /*
+         *loadstart 开始加载
+         */
+        $('#player1').on('loadstart',function(){
+
+            console.log('loadstart:开始加载！');
+            console.log('请求资源：'+player.currentSrc);
+
+        });
+
+
+        /*
+         *durationchange 有数据变化
+         */
+        $('#player1').on('durationchange',function(){
+
+            console.log('durationchange:有数据变化 ！');
+            console.log('缓存数:',player.buffered.length,'缓存段1：',player.buffered.start(0)+'-'+player.buffered.end(0));
+
+        });
+
+
+
+        /*
+         *loadedmetadata 媒体信息加载完毕
+         */
+        $('#player1').on('loadedmetadata',function(){
+
+            console.log('loadedmetadata:媒体信息加载完毕！');
+            console.log('缓存数:',player.buffered.length,'缓存段1：',player.buffered.start(0)+'-'+player.buffered.end(0));
+            console.log('媒体总时间：',player.duration/60+'分');
+
+        });
+        /*
+         *当前帧的数据已加载
+         */
+        $('#player1').on('loadeddata',function(){
+
+            console.log('loadeddata:当前帧的数据已加载！');
+            console.log('缓存数:',player.buffered.length,'缓存段1：',player.buffered.start(0)+'-'+player.buffered.end(0));
+            console.log('可选择段:',player.seekable.length,'缓存段1：',player.seekable.start(0)+'-'+player.seekable.end(0));
+            console.log('媒体总时间：',player.duration);
+
+        });
+
+
+        /*
+         *正在下载
+         */
+        $('#player1').on('progress',function(){
+
+            //console.log('progress:正在下载 ！');
+            //console.log('缓存数:',player.buffered.length,'缓存段1：',player.buffered.start(0)+'-'+player.buffered.end(0));
+            //console.log('媒体总时间：',player.duration);
+
+        });
+
+
+
+        /*
+         *可以流畅播放了
+         */
+        $('#player1').on('canplaythrough',function(){
+
+            console.log('canplaythrough:可以流畅播放了');
+            console.log('缓存数:',player.buffered.length,'缓存段1：',player.buffered.start(0)+'-'+player.buffered.end(0));
+            console.log('可选择段:',player.seekable.length,'缓存段1：',player.seekable.start(0)+'-'+player.seekable.end(0));
+            console.log('媒体总时间：',player.duration);
+
+        });
+
+
+        /*
+         *播放状态时状
+         */
+        $('#player1').on('playing',function(){
+
+            console.log('playing:播放状态改变了,暂停：'+player.paused);
+
+
+        });
+
+        /*
+         *播放事件
+         */
+        $('#player1').on('play',function(){
+
+            console.log('play:播放中,暂停：'+player.paused);
+
+
+        });
+
+        /*
+         *暂停中
+         */
+        $('#player1').on('pause',function(){
+
+            console.log('pause:暂停中,暂停：'+player.paused);
+
+
+        });
+
+
+        /*
+         *需要缓冲时
+         */
+        $('#player1').on('waiting',function(){
+
+            console.log('waiting:缓冲中,暂停：'+player.paused);
+
+
+        });
+
+
+        /*
+         *加载错误时
+         */
+        $('#player1').on('error',function(){
+
+            console.log('error:加载错误中');
+
+
+        });
+
+
+        /*
+         *播放进度事件
+         */
+        $('#player1').on('timeupdate',function(){
+
+            console.log('timeupdate:播放位置：',player.currentTime);
+
+
+        });
+
+
+
+
+
+
+
+
+    });
+    //loadstart durationchange loadedmetadata loadeddata progress canplay canplaythrough
+</script>
+
+
+
+
+</body>
+</html>

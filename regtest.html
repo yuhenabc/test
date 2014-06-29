@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>reg test</title>
+    <script type="text/javascript" class="library" src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<script>
+    $(function() {
+        var reg1 = /#\S*/;    // href like #top
+        var reg2 = /(tel:\/\/)\S*/;    // href like tel://010-88888888
+        var reg3 = /(javascript)\S*/;    // href like javascript:void(0)
+        var reg4 = /(http:\/\/weibo.com)\S*/;    // href like http://weibo.com/n/
+        console.log(reg1.test('#top'));
+        console.log(reg2.test('tel://010-88888888'));
+        console.log(reg3.test('javascript:void(0);'));
+        console.log(reg4.test('http://weibo.com/n/kuailian'));
+    });
+</script>
+</body>
+</html>
