@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>DOM</title>
 <style>
 
@@ -11,8 +11,8 @@ window.onload = function() {
 	var list = document.getElementById('list');
 	for(i=0;i<list.childNodes.length;i++) {
 		//alert(list.childNodes[i].nodeType);
-		// nodeType==1 元素（标签）节点
-		// nodeType==3 文本（非标签）节点
+		// nodeType==1 鍏冪礌锛堟爣绛撅級鑺傜偣
+		// nodeType==3 鏂囨湰锛堥潪鏍囩锛夎妭鐐�
 		if(list.childNodes[i].nodeType==1) {
 			list.childNodes[i].style.background = 'red';
 		}

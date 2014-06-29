@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
-<title>Ê±¼ä</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>æ—¶é—´</title>
 </head>
 <body>
 <script type="text/javascript">
@@ -14,14 +14,14 @@ var dayOfWeek = date.getDay();
 var hour = date.getHours();
 var minute = date.getMinutes();
 var second = date.getSeconds();
-var message = "½ñÄêÊÇ"+year+"Äê";
+var message = "ä»Šå¹´æ˜¯"+year+"å¹´";
 if ((year%4==0 && year%100!=0) || (year%400==0)) {
-	message += "£¬ÊÇ¸öÈòÄê£¡";
+	message += "ï¼Œæ˜¯ä¸ªé—°å¹´ï¼";
 } else {
-	message += "£¬ÊÇ¸öÆ½Äê£¡";
+	message += "ï¼Œæ˜¯ä¸ªå¹³å¹´ï¼";
 }
-message += "<br/>ÈÕÆÚÊÇ "+month+"ÔÂ"+day+"ÈÕ£¬ĞÇÆÚ"+dayOfWeek;
-message += "<br/>ÏÖÔÚÊÇ"+hour+"Ê±"+minute+"·Ö"+second+"Ãë£¡<br/>";
+message += "<br/>æ—¥æœŸæ˜¯ "+month+"æœˆ"+day+"æ—¥ï¼Œæ˜ŸæœŸ"+dayOfWeek;
+message += "<br/>ç°åœ¨æ˜¯"+hour+"æ—¶"+minute+"åˆ†"+second+"ç§’ï¼<br/>";
 document.write(message);
 </script>
 </body>
