@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <title>Array</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
   <meta name="description" content="cccc">
-  <style type="text/css">
-  body,p,h4,h5,ul,li,a,img {margin: 0; padding: 0}
-  a {border: 0;}
-  body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+  <style>
+    body,p,h4,h5,ul,li,a,img {margin: 0; padding: 0}
+    a {border: 0;}
+    body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
   </style>
-  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
   <div id="box"></div>
@@ -20,43 +18,39 @@ $(function() {
 
   var str = 'good';
   var arr = ['ok','good','better','best'];
-  // console.log($.inArray(str, arr));
+  console.log($.inArray(str, arr));
   
   var arr1 = ['张三', '李四', '王五', '马六'];
-  $.each(arr, function (index, value) {
-    // $('#box').html($('#box').html() + (index+1) + '.' + value + '<br/>');
-  });
-  
-  $.each($.ajax(), function (name, fn) {
-    // $('#box').html($('#box').html() + name + '<br/>');
+  $.each(arr1, function (index, value) {
+    console.log((index + 1) + '. ' + value);
   });
   
   var arr2 = [4,2,6,9,11,25,38,59];
   var arrGrep = $.grep(arr2, function (element, index) {
     return element < 50 && element > 10;
   });
-  // console.log(arrGrep);
+  console.log(arrGrep);
   
   var arr3 = [4,2,6,9,11,25,38,59];
   var arrMap = $.map(arr3, function (element, index) {
     return element < 50 && element > 10;
   });
-  // console.log(arrMap);
+  console.log(arrMap);
   
   var arr4 = [4,2,6,9,11,25,38,59];
   var arr5 = [200,300];
   console.log($.merge(arr4, arr5));
 
-  // need mingrant
+  // need mingrant.js
   var arr6 = [5,2,9,4,11,57,89,1,23,8];
   var arr7 = [2,9,4];
-  // console.log($.unique($.merge(arr6, arr7)));
+  console.log($.unique($.merge(arr6, arr7)));
   
   var divs = $('div').get();
   divs = divs.concat($('.box').get());
-  // console.log($(divs).size());
+  console.log($(divs).size());
   $.unique(divs);
-  // console.log($(divs).size());
+  console.log($(divs).size());
 
 });
 </script>

@@ -10,19 +10,14 @@
 <body>
   <script type="text/javascript">
     function isBigYear(year) {
-      if(year%400==0||(year%4==0&&year%100!=0)) {
-        return true;
-      } else {
-        return false;
-      }
+      return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
     console.log(isBigYear(2008));
 
     function getTargetDate(n) {
       var target = new Date();
       target.setTime(target.getTime()-24*3600*1000*n);
-      var targetDate = [target.getFullYear(),target.getMonth()+1,target.getDate()];
-      return targetDate;
+      return [target.getFullYear(), target.getMonth() + 1, target.getDate()];
     }
     console.log(getTargetDate(30));
   </script>
