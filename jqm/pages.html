@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery moblie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../css/jquery.mobile.css" type="text/css" rel="stylesheet"/>
+    <script src="../js/jquery.js" type="text/javascript"></script>
+    <script src="../js/jquery.mobile.js" type="text/javascript"></script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="content">
+        <a href="#pagetwo" data-role="button" data-transition="slide">转到页面二</a>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="content">
+        <a href="#pageone" data-role="button" data-transition="pop">转到页面一</a>
+    </div>
+</div>
+</body>
+</html>
