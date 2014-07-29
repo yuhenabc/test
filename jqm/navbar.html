@@ -14,25 +14,61 @@
         <h1>欢迎来到我的主页</h1>
         <div data-role="navbar">
             <ul>
-                <li><a href="#ct1" data-icon="home">首页</a></li>
-                <li><a href="#ct2" data-icon="arrow-r">页面二</a></li>
-                <li><a href="#ct3" data-icon="search">搜索</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="home">首页</a></li>
+                <li><a href="#pagetwo" class="" data-icon="arrow-r" data-transition="none">正文页</a></li>
+                <li><a href="#pagethree" class="" data-icon="search" data-transition="none">搜索</a></li>
             </ul>
         </div>
     </div>
 
-    <div data-role="content" id="ct1">
-        <p>我的内容1..</p>
-    </div>
-    <div data-role="content" id="ct2">
-        <p>我的内容2..</p>
-    </div>
-    <div data-role="content" id="ct3">
-        <p>我的内容2..</p>
+    <div data-role="content">
+        <p>首页内容...</p>
     </div>
 
     <div data-role="footer">
-        <h1>我的页脚</h1>
+        <h1>我的页脚1</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pageone" class="" data-icon="home" data-transition="none">首页</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="arrow-r">正文页</a></li>
+                <li><a href="#pagethree" class="" data-icon="search" data-transition="none">搜索</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+        <p>正文内容...</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>我的页脚2</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagethree">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pageone" class="" data-icon="home" data-transition="none">首页</a></li>
+                <li><a href="#pagetwo" class="" data-icon="arrow-r" data-transition="none">正文页</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="search">搜索</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+        <p>搜索内容...</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>我的页脚3</h1>
     </div>
 </div>
 </body>
