@@ -5,7 +5,7 @@ var ZeroClipboard = {
 	
 	version: "1.0.7",
 	clients: {}, // registered upload clients on page, indexed by id
-	moviePath: 'http://static.blog.csdn.net/scripts/ZeroClipboard/ZeroClipboard.swf', //http://skin.ganjinpai.com/script/plugins/ URL to movie
+	moviePath: 'ZeroClipboard.swf',
 	nextId: 1, // ID of next movie
 	
 	$: function(thingy) {
