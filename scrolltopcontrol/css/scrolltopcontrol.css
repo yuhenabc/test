@@ -1,0 +1,6 @@
+*{ padding:0; margin:0;}
+#tbox{width:47px; height:73px; float:right; position:fixed;}
+#jianyi{ width:47px; height:25px; background:url(../images/suggest.png) no-repeat; position:absolute; bottom:0; cursor:pointer}
+#gotop{ width:47px; height:47px; background:url(../images/top01.png) no-repeat; position:absolute; top:0; display:none; cursor:pointer}
+#jianyi:hover{ background:url(../images/suggest.png) no-repeat 0 -26px;}
+#gotop:hover{ background:url(../images/top02.png) no-repeat;}
