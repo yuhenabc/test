@@ -1,5 +1,4 @@
 .top {
-  /*background: #009dff;*/
     background: linear-gradient(to right,#009dff 0,#00c8ff 100%);
     position: fixed;
     z-index: 1031;
