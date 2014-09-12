@@ -17,6 +17,7 @@
     <button class="btn btn-default" id="btn1">alert</button>
     <button class="btn btn-default" id="btn2">confirm</button>
     <button class="btn btn-default" id="btn3">prompt</button>
+    <button class="btn btn-default" id="btn4">dialog</button>
 </div>
 <script>
 $(document).ready(function() {
@@ -33,6 +34,35 @@ $(document).ready(function() {
     $('#btn3').click(function() {
         bootbox.prompt("Hello world!", function(result) {
             console.log(result);
+        });
+    });
+    $('#btn4').click(function() {
+        bootbox.dialog({
+            message: "I am a custom dialog",
+            title: "Custom title",
+            buttons: {
+                success: {
+                    label: "Success!",
+                    className: "btn-success",
+                    callback: function() {
+                        console.log("great success");
+                    }
+                },
+                danger: {
+                    label: "Danger!",
+                    className: "btn-danger",
+                    callback: function() {
+                        console.log("uh oh, look out!");
+                    }
+                },
+                main: {
+                    label: "Click ME!",
+                    className: "btn-primary",
+                    callback: function() {
+                        console.log("Primary button");
+                    }
+                }
+            }
         });
     });
 });
