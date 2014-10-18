@@ -2,12 +2,13 @@ body,ul,li {margin: 0; padding: 0;}
 body {background-color: black;}
 .wrap {width:960px; margin: 0 auto;}
 .blank {height:20px; clear: both;}
-.lunbo { position:relative;}
-.lunbo .top{ width:960px; position:relative; top:0; left:0;}
-.lunbo .top ul{ width:960px; height:620px;}
-.lunbo .top li{ width:960px; height:620px; position:absolute; left:0; top:0; overflow:hidden; display:none; }
-.lunbo .top li img {width:960px; height:auto;}
-.lunbo .top li a {border: none;}
-.lunbo .no_list{ position:absolute; bottom:20px; right:20px; width:150px;}
-.lunbo .no_list a{ display:inline-block; overflow:hidden; margin-right:6px; background:url(../img/dian.png) no-repeat; height:8px; width:8px; _background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="img/dian.png");}
-.lunbo .no_list a:hover, .lunbo .no_list a.cur{ background:url(../img/dian_cur.png) no-repeat; width:8px; height:8px; _background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="img/dian_cur.png");}
+.lunbo {position:relative;}
+.lunbo .lunbo-top {width:960px; position:relative; top:0; left:0;}
+.lunbo .lunbo-top ul{width:960px; height:620px;}
+.lunbo .lunbo-top li{width:960px; height:620px; position:absolute; left:0; top:0; overflow:hidden; display:none; }
+.lunbo .lunbo-top li img {width:960px; height:auto;}
+.lunbo .lunbo-top li a {border: none;}
+.lunbo .lunbo-bottom {position:absolute; bottom:20px; right:20px; width:150px;}
+.lunbo .lunbo-bottom a {display:inline-block; overflow:hidden; margin-right:6px; background-color: #BBB; height:8px; width:8px; border-radius: 100%;}
+.lunbo .lunbo-bottom a:hover,
+.lunbo .lunbo-bottom a.cur { background-color: #FFF;}
