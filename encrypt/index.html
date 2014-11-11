@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>加密测试</title>
+    <script src="js/base64.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/sha1.js"></script>
+</head>
+<body>
+<script>
+    var en_escape = escape('小猫咪');
+    var de_escape = unescape(en_escape);
+    console.log('en_escape', en_escape);
+    console.log('de_escape', de_escape);
+
+    var b = new Base64();
+    var en_base64 = b.encode('小猫咪');
+    var de_base64 = b.decode(en_base64);
+    console.log('en_base64', en_base64);
+    console.log('de_base64', de_base64);
+
+    var en_md5 = hex_md5('小猫咪');
+    console.log('is_md5_ready', md5_vm_test());
+    console.log('en_md5', en_md5);
+
+    var en_sha1 = hex_sha1('小猫咪');
+    console.log('en_sha1', en_sha1);
+</script>
+</body>
+</html>
