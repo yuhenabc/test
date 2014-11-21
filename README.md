@@ -1,11 +1,13 @@
-test
---------
+# Test
 
-#### Goals
+> **Goals :**
 > 1. Test my develop skill !
 > 2. You know it !
 
-#### Introduction
+--------
+
+## Introduction
+
 directories    |explanation
 ---------------|------------------------
 abc            |basic use of html
@@ -13,7 +15,8 @@ album          |photo albums effect
 blockui        |disturb-less alert plugin
 bootbox        |like bootstarp modal
 caidan         |menu demo
-cssbox         |
+cssbox         |css box model test
+encrypt        |base64 md5 sha1
 filter         |image filter effect
 floatmenu      |menu demo
 fort           |form complete tip
@@ -24,8 +27,9 @@ magic          |css3 animation effect
 metalmenu      |menu demo
 mytab          |tab demo
 panelslider    |show/hide side panel
+plugin         |write jQuery plugin
 pnotify        |disturb-less alert plugin
-prefix         |
+prefix         |css &lt;link&gt; to &lt;style&gt;
 qrcode         |generate qrcode
 region         |multilevel region select
 scrolltop      |scroll to top
