@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; }
+body {font: 100% "Helvetica Neue", Helvetica, sans-serif; background: #000000;color: #ffffff;}
+p {letter-spacing: .2pt;line-height: 1.5em;margin-bottom: 1.2em;word-spacing: 0.7pt;}
+h1 {font-size:50px; margin: 20px 0; text-align: center;}
+h2 {margin-bottom: 20px;}
+#wrapper{margin: 0 auto; width: 900px;}
+#header {width: auto;height: 366px;margin: auto;}
+#images {margin: 0 auto; width: 600px; height: 220px; float:none; margin-bottom: 20px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border:1px solid rgba(200,200,200,0.4);}
+#footer {}
+#footer a {-webkit-transition: color 0.2s linear;}
+#footer a {color:#355982;text-decoration:none;padding:3px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border:1px solid rgba(200,200,200,0.4);}
+#footer a:hover {color:#3996ff; background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(225,225,225,1)), color-stop(50%, rgba(250,250,250,1)) ); -moz-border-radius: 5px; -webkit-border-radius: 5px; border:1px solid rgb(200,200,200);}
+#footer a:active {-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0, 0.5); -webkit-transform: translateY(-1px);}
+.jfade-image {width: 120px; margin: 15px; float:left;}
