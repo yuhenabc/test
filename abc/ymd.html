@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>JQuery实例 - 生成年月日</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $day = $("#day"),
+                $month = $("#month"),
+                $year = $("#year");
+
+            var dDate = new Date(),
+                    dCurYear = dDate.getFullYear(),
+                    str = "";
+            for (var i = dCurYear - 100; i < dCurYear + 1; i++) {
+                if (i == dCurYear) {
+                    str = "<option value=" + i + " selected=true>" + i + "</option>";
+                } else {
+                    str = "<option value=" + i + ">" + i + "</option>";
+                }
+                $year.append(str);
+            }
+
+            for (var j = 1; j <= 12; j++) {
+
+                if (j == (dDate.getMonth() + 1)) {
+                    str = "<option value=" + j + " selected=true>" + j + "</option>";
+                } else {
+                    str = "<option value=" + j + ">" + j + "</option>";
+                }
+                $month.append(str);
+            }
+
+            TUpdateCal($year.val(), $month.val());
+            $("#year,#month").bind("change", function () {
+                TUpdateCal($year.val(), $month.val());
+            });
+        });
+
+        // 根据年月获取当月最大天数
+        function TGetDaysInMonth(iMonth, iYear) {
+            var dPrevDate = new Date(iYear, iMonth, 0);
+            return dPrevDate.getDate();
+        }
+
+        function TUpdateCal(iYear, iMonth) {
+            var $day = $("#day"),
+                dDate = new Date(),
+                daysInMonth = TGetDaysInMonth(iMonth, iYear),
+                str = "";
+            $day.empty();
+            for (var d = 1; d <= parseInt(daysInMonth); d++) {
+                if (d == dDate.getDate()) {
+                    str = "<option value=" + d + " selected=true>" + d + "</option>";
+                } else {
+                    str = "<option value=" + d + ">" + d + "</option>";
+                }
+                $day.append(str);
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="ymd">
+    <select id="year"></select>年
+    <select id="month"></select>月
+    <select id="day"></select>日
+</form>
+</body>
+</html>
