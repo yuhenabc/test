@@ -12,17 +12,17 @@
             $.each($inputs, function(index, elem) {
                 $(elem).val(opts.value);
             });
-            _log(opts.scope);
         }
 
-        function _log(v) {
-            console.log(v);
+        if (opts.callback) {
+            opts.callback(opts.value);
         }
     };
 
     $.inputChange.defaults = {
         scope: 'body',
-        value: ''
+        value: '',
+        callback: null
     };
 
 })(jQuery);
