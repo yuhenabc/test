@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8">
 <title>时间</title>
 </head>
 <body>
-<script type="text/javascript">
+<script>
 var date = new Date();
 var year = date.getFullYear();
 var month = date.getMonth()+1;
@@ -16,12 +16,12 @@ var minute = date.getMinutes();
 var second = date.getSeconds();
 var message = "今年是"+year+"年";
 if ((year%4==0 && year%100!=0) || (year%400==0)) {
-	message += "，是个闰年！";
+	message += "，是个闰年";
 } else {
-	message += "，是个平年！";
+	message += "，是个平年";
 }
-message += "<br/>日期是 "+month+"月"+day+"日，星期"+dayOfWeek;
-message += "<br/>现在是"+hour+"时"+minute+"分"+second+"秒！<br/>";
+message += "，日期是 "+month+"月"+day+"日，星期"+dayOfWeek;
+message += "，现在是"+hour+"时"+minute+"分"+second+"秒！";
 document.write(message);
 </script>
 </body>
