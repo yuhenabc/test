@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>scroll test</title>
+    <script src="../js/jquery-1.8.3.js" type="text/javascript"></script>
+    <style>
+        body {margin: 0;}
+        .main {height: 2000px;}
+        .btn-wrapper {text-align: center; padding: 20px 0;}
+        .btn-wrapper button {width: 120px; height: 80px; cursor: pointer;}
+        .modal-wrapper {position: fixed; top: 0; left: 0; background-color: rgba(25,25,25,.3);}
+        .modal {margin-left: auto; margin-right: auto; padding-top: 20px; background-color: white; box-shadow: 0 0 3px rgba(10,10,10,.5); border-radius: 4px;}
+        .modal-content {margin: 0; padding-left: 0; display: block; margin: 0 10px; overflow-x: hidden; overflow-y: auto;}
+        .hide {display: none;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="btn-wrapper">
+            <button id="btn-show-modal">弹窗</button>
+        </div>
+    </div>
+    <div class="modal-wrapper hide">
+        <div class="modal">
+            <ul class="modal-content"></ul>
+        </div>
+    </div>
+<script>
+    $(function() {
+        function showModal() {
+            var dwidth = document.documentElement.clientWidth;
+            var dheight = document.documentElement.clientHeight;
+            var $modal_wrapper = $('.modal-wrapper').first();
+            var $modal = $('.modal').first();
+            var $modal_content = $('.modal-content').first();
+            $modal_wrapper.css({'width': dwidth, 'height': dheight, 'padding-top': dheight/6});
+            $modal.css({'width': Math.round(dwidth/2), 'height': Math.round(dheight*2/3)})
+            $modal_content.css({'height': Math.round(dheight*2/3)-20});
+            for (var i=1; i<=50; i++) {
+                $modal_content.append('<li>好消息 '+i+'</li>');
+            }
+            // console.log('object' == typeof window.onmousewheel);
+            // console.log(!! window.addEventListener);
+            if ('object' == typeof window.onmousewheel) {// IE、Chrome
+                $modal_wrapper.get(0).onmousewheel = function(event) {
+                    var origin_scroll_top = $modal_content.get(0).scrollTop;
+                    var scroll_change = event.wheelDelta || 0;
+                    $modal_content.get(0).scrollTop = origin_scroll_top - scroll_change*20/120;
+                    // console.log(origin_scroll_top, scroll_change);
+                    event.stopPropagation();
+                    event.preventDefault();
+                };
+            } else if (!!window.addEventListener){// Firefox
+                $modal_wrapper.get(0).addEventListener("DOMMouseScroll", function (event) {
+                    var origin_scroll_top = $modal_content.get(0).scrollTop;
+                    var scroll_change = event.detail || 0;
+                    $modal_content.get(0).scrollTop = origin_scroll_top - scroll_change*20/3;
+                    // console.log(origin_scroll_top, scroll_change);
+                    event.stopPropagation();
+                    event.preventDefault();
+                });
+            }
+            $modal_wrapper.removeClass('hide');
+        }
+
+        $('#btn-show-modal').on('click', function() {
+            showModal();
+        });
+    });
+</script>
+</body>
+</html>
