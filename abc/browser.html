@@ -7,9 +7,10 @@
 function reportBrowser() {
     var name=navigator.appName;
     var ua = navigator.userAgent;
+    var pf = navigator.platform;
     var mode = document.documentMode;
     console.log(navigator);
-    alert("appName："+name+"\ndocumentMode："+mode+"\nUserAgent：\n"+ua);
+    alert("appName："+name+"\ndocumentMode："+mode+"\nUserAgent：\n"+ua+"\nplatform："+pf);
 }
 function isOnline() {
     if (navigator.onLine) {
