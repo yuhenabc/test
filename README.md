@@ -1,10 +1,9 @@
 # Test
 
-> **Goals :**
-> 1. Test my develop skill !
-> 2. You know it !
+## Goals
 
---------
+1. Test my develop skill !
+2. You know it !
 
 ## Introduction
 
