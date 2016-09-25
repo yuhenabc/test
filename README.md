@@ -1,11 +1,11 @@
 # Test
 
-## Goals
+### Goals
 
 1. Test my develop skill !
 2. You know it !
 
-## Introduction
+### Introduction
 
 directories    |explanation
 ---------------|------------------------
