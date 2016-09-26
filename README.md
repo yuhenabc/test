@@ -15,6 +15,7 @@ blockui        |disturb-less alert plugin
 bootbox        |like bootstarp modal
 caidan         |menu demo
 cssbox         |css box model test
+css3           |css3 test
 encrypt        |base64 md5 sha1
 filter         |image filter effect
 floatmenu      |menu demo
