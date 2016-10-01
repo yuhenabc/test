@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+ul {
+    line-height: 30px;
+    list-style: none;
+}
+header {
+    background-color: rebeccapurple;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+footer {
+    background-color: coral;
+    flex: 0 0 30px;
+}
+.root {
+    background-color: #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+.vhead {
+    background-color: aquamarine;
+    height: 50px;
+    flex: none;
+}
+.main {
+    background-color: #f0f0f0;
+    display: flex;
+    flex: 1 0 400px;
+}
+nav {
+    background-color: gainsboro;
+    flex: 0 0 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.content{
+    background-color: burlywood;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

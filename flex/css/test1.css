@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+.container {
+    display: flex;
+}
+
+.initial {
+    background-color: aqua;
+    flex: initial;
+    width: 200px;
+    min-width: 100px;
+}
+
+.none {
+    background-color: bisque;
+    flex: 0 0 200px;
+}
+
+.flex1 {
+    background-color: cadetblue;
+    flex: 1 0 80px;
+}
+
+.flex2 {
+    background-color: darksalmon;
+    flex: 2 0 100px;
+}
