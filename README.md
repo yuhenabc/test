@@ -31,6 +31,7 @@ plugin         |write jQuery plugin
 pnotify        |disturb-less alert plugin
 prefix         |css &lt;link&gt; to &lt;style&gt;
 qrcode         |generate qrcode
+regex          |regex test
 region         |multilevel region select
 resize         |optimize window resize
 scrolltop      |scroll to top
