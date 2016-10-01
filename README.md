@@ -15,9 +15,9 @@ blockui        |disturb-less alert plugin
 bootbox        |like bootstarp modal
 caidan         |menu demo
 cssbox         |css box model test
-css3           |css3 test
 encrypt        |base64 md5 sha1
 filter         |image filter effect
+flex           |flex demo
 floatmenu      |menu demo
 fort           |form complete tip
 jqm            |jquery mobile
@@ -34,6 +34,7 @@ qrcode         |generate qrcode
 region         |multilevel region select
 scrolltop      |scroll to top
 spinkit        |some spinners
+three          |css3 demo
 timer          |funy clock
 validator      |form validator
 words          |words effect
