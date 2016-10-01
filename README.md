@@ -32,6 +32,7 @@ pnotify        |disturb-less alert plugin
 prefix         |css &lt;link&gt; to &lt;style&gt;
 qrcode         |generate qrcode
 region         |multilevel region select
+resize         |optimize window resize
 scrolltop      |scroll to top
 spinkit        |some spinners
 three          |css3 demo
