@@ -1,4 +1,26 @@
-﻿body {margin: 0; padding: 0;}
-#box {width:500px; margin: 100px auto 0; background-color: #DDD; border: 1px dashed #999;}
-.btn {padding: 3px 18px; margin: 10px 20px;}
-#info {display:none; width:400px; margin: 0 auto; padding: 20px; font-size: 60%; line-height:20px; text-align: center;}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#box {
+  width: 500px;
+  margin: 100px auto 0;
+  background-color: #DDD;
+  border: 1px dashed #999;
+}
+
+.btn {
+  padding: 3px 18px;
+  margin: 10px 20px;
+}
+
+#info {
+  display: none;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 60%;
+  line-height: 20px;
+  text-align: center;
+}

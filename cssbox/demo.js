@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+$(function () {
 	var div1 = $('#div1');
 	var div2 = $('#div2');
 	var div3 = $('#div3');

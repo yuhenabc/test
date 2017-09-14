@@ -1,9 +1,52 @@
-﻿body {margin: 0; padding: 0;}
-strong {font-size: 16px;}
-#div1 {width:200px; height:100px; margin: 0 auto 50px; background-color: #DDD;}
-#div3 {width:40px; height:40px; padding: 10px; margin: 15px; float: right; background-color: green; border: 5px solid #000;}
-.info-area {width:960px; margin: 0 auto 50px;}
-.info-panel {width:400px; padding: 20px; font-size: 14px; line-height:32px; background-color: #f8f8f8; border-radius: 8px;}
-#info-left {float: left;}
-#info-right {float: right;}
-.blank {clear: both; height: 1px;}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-size: 16px;
+}
+
+#div1 {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto 50px;
+  background-color: #DDD;
+}
+
+#div3 {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 15px;
+  float: right;
+  background-color: green;
+  border: 5px solid #000;
+}
+
+.info-area {
+  width: 960px;
+  margin: 0 auto 50px;
+}
+
+.info-panel {
+  width: 400px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 32px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+#info-left {
+  float: left;
+}
+
+#info-right {
+  float: right;
+}
+
+.blank {
+  clear: both;
+  height: 1px;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geo API</title>
+</head>
+
+<body>
+
+  <script>
+    
+    function showPosition(data) {
+      console.log(data);
+    }
+    
+    function showError(err) {
+      console.log(err);
+    }
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError, {});
+      } else {
+        alert("浏览器不支持地理定位。");
+      }
+    }
+    
+    window.getLocation = getLocation;
+
+  </script>
+
+</body>
+
+</html>

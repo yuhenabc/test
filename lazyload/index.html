@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-	<title>lazyload</title>
-	<meta name="generator" content="EverEdit" />
-	<meta name="author"	content="" />
-	<meta name="keywords" content="" />
-	<meta name="description" content=""	/>
-	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery.lazyload.js"></script>
-	<style type="text/css">
-		img.lazy {width:360px; height:640px; margin: 20px auto; background:url('img/loading.gif') no-repeat center center;}
-	</style>
+  <meta charset="utf-8">
+  <title>lazyload</title>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+  <style type="text/css" rel="stylesheet">
+    .wrapper {
+      font-size: 0;
+    }
+    
+    img.lazy {
+      width: 33.333%;
+      height: auto;
+      box-sizing: border-box;
+      border: 2px solid transparent;
+      background: url('img/loading.gif') no-repeat center center;
+    }
+
+  </style>
 </head>
+
 <body>
-	<img class="lazy" data-original="img/mm01.jpg"/>
-	<img class="lazy" data-original="img/mm02.jpg"/>
-	<img class="lazy" data-original="img/mm03.jpg"/>
-	<img class="lazy" data-original="img/mm04.jpg"/>
-	<img class="lazy" data-original="img/mm05.jpg"/>
-	<img class="lazy" data-original="img/mm06.jpg"/>
-	<img class="lazy" data-original="img/mm07.jpg"/>
-	<img class="lazy" data-original="img/mm08.jpg"/>
-	<img class="lazy" data-original="img/mm09.jpg"/>
-	<img class="lazy" data-original="img/mm10.jpg"/>
-	<img class="lazy" data-original="img/mm11.jpg"/>
-	<img class="lazy" data-original="img/mm12.jpg"/>
-	<img class="lazy" data-original="img/mm13.jpg"/>
-	<img class="lazy" data-original="img/mm14.jpg"/>
-	<img class="lazy" data-original="img/mm15.jpg"/>
-	<img class="lazy" data-original="img/mm16.jpg"/>
-	<img class="lazy" data-original="img/mm17.jpg"/>
-	<img class="lazy" data-original="img/mm18.jpg"/>
-	<img class="lazy" data-original="img/mm19.jpg"/>
-	<img class="lazy" data-original="img/mm20.jpg"/>
-	<img class="lazy" data-original="img/mm21.jpg"/>
-	<img class="lazy" data-original="img/mm22.jpg"/>
-	<img class="lazy" data-original="img/mm23.jpg"/>
-	<img class="lazy" data-original="img/mm24.jpg"/>
-    <img class="lazy" data-original="img/mm25.jpg"/>
-    <img class="lazy" data-original="img/mm26.jpg"/>
-    <img class="lazy" data-original="img/mm27.jpg"/>
-<script type="text/javascript">
-	$(function(){
-		$("img.lazy").lazyload();
-	});
-</script>
+  <div class="wrapper">
+    <img class="lazy" data-original="img/mm01.jpg">
+    <img class="lazy" data-original="img/mm02.jpg">
+    <img class="lazy" data-original="img/mm03.jpg">
+    <img class="lazy" data-original="img/mm04.jpg">
+    <img class="lazy" data-original="img/mm05.jpg">
+    <img class="lazy" data-original="img/mm06.jpg">
+    <img class="lazy" data-original="img/mm07.jpg">
+    <img class="lazy" data-original="img/mm08.jpg">
+    <img class="lazy" data-original="img/mm09.jpg">
+    <img class="lazy" data-original="img/mm10.jpg">
+    <img class="lazy" data-original="img/mm11.jpg">
+    <img class="lazy" data-original="img/mm12.jpg">
+    <img class="lazy" data-original="img/mm13.jpg">
+    <img class="lazy" data-original="img/mm14.jpg">
+    <img class="lazy" data-original="img/mm15.jpg">
+    <img class="lazy" data-original="img/mm16.jpg">
+    <img class="lazy" data-original="img/mm17.jpg">
+    <img class="lazy" data-original="img/mm18.jpg">
+    <img class="lazy" data-original="img/mm19.jpg">
+    <img class="lazy" data-original="img/mm20.jpg">
+    <img class="lazy" data-original="img/mm21.jpg">
+    <img class="lazy" data-original="img/mm22.jpg">
+    <img class="lazy" data-original="img/mm23.jpg">
+    <img class="lazy" data-original="img/mm24.jpg">
+    <img class="lazy" data-original="img/mm25.jpg">
+    <img class="lazy" data-original="img/mm26.jpg">
+    <img class="lazy" data-original="img/mm27.jpg">
+  </div>
+  <script>
+    $(function() {
+      $("img.lazy").lazyload();
+    });
+
+  </script>
 </body>
+
 </html>
